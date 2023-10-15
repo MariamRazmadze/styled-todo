@@ -19,13 +19,23 @@ body {
   font-family: "Quicksand";
   font-weight: 500;
   overflow-x: hidden;
+  font-family: "Quicksand";
 }
+
+
 .app {
   width: 100%;
   height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
+
+h3 {
+  margin-right: 1.6rem;
+  font-size: 2.4rem;
+}
+
+
 
 `;
 

@@ -5,15 +5,26 @@ import { useState } from "react";
 import { Stats } from "./components/Stats";
 import { TodoList } from "./components/ToDoList";
 import { Form } from "./components/Form";
+import { Helmet } from "react-helmet";
 
 // const defaultTheme = {
 //   background: "#485b62;",
 //   primaryColor: "#542c49",
+//   formColor: "#853553",
+//   formTextColor: "#ffffff",
+//   allTextsColor: "#cbcbe3",
+//   buttonsHoverColor: "#798a94",
+//   customCheckboxColor: "#355070;",
 // };
 
 const blueTheme = {
   background: "#0F52BA",
   primaryColor: " #002366",
+  formColor: "#000133",
+  formTextColor: "#ffffff",
+  allTextsColor: "#cbcbe3",
+  buttonsHoverColor: "#798a94",
+  customCheckboxColor: "#355070;",
 };
 
 export interface ItemType {
@@ -50,6 +61,12 @@ function App() {
   return (
     <ThemeProvider theme={blueTheme}>
       <GlobalStyles />
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
       <div className="app">
         <Header />
         <Form onAddItems={handleAddItems} />
